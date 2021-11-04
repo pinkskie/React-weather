@@ -16,14 +16,18 @@ export const Header = (props: Props) => {
   const colourStyles = {
     control: (styles: any) => ({
       ...styles, 
-      backgroundColor: 'rgba(71, 147, 255, 0.2)',
+      backgroundColor: 0 ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
       borderRaduis: '10px',
       width: '194px',
       height: '37px',
       border: 'none',
       zIndex: '100'
+    }),
+    singleValue: (styles: any) => ({
+      ...styles, 
+    color: 0 ? '#fff' : '#000',
     })
-  }
+  };
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
